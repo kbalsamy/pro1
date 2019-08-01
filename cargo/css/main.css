@@ -1,0 +1,94 @@
+html {
+    font-size: 16px!important; /* base font*/
+    font-weight: 200;
+}
+
+
+body {
+
+    background-color: #eddedd;
+    font-family:  "Gotham SSm A", "Gotham SSm B", Arial, maven-pro, sans-serif;
+    color: #484c54;
+    background-color: #CCCCCC!important;
+    letter-spacing: 0px!important;
+    font-kerning: none;
+    font-style: normal;
+    font-size: 100%;
+}
+
+
+input[type="submit"] {
+  border: none!important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+
+    border-color: #484C54 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset !important;
+    outline: 0 none;
+}
+
+
+.navbar-brand > img {
+
+    width: 40%;
+}
+
+
+.navbar-nav > li > a{
+
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  display: block;
+  border-bottom: 3px solid red;
+
+}
+
+#menu-link {
+    color: white;
+}
+
+.current-page {
+
+    display: block;
+    border-bottom: 3px solid white !important;
+}
+
+.navbar-nav > li > a:hover {
+
+    color: black;
+    background-color: blue ;
+    display: block;
+    border-bottom: 3px solid transparent;
+
+}
+
+
+.query-row {
+
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .carousel-item > img {
+
+        height: 250px;
+    }
+}
+
+
+address {
+
+    color: white;
+}
