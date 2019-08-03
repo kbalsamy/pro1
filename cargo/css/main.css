@@ -5,10 +5,8 @@ html {
 }
 
 
-
 body {
-
-    background-color: #eddedd;
+    
     font-family:  "Gotham SSm A", "Gotham SSm B", Arial, maven-pro, sans-serif;
     color: #484c54;
     background-color: #CCCCCC!important;
@@ -20,7 +18,7 @@ body {
 }
 
 
-
+/*form controls*/
 
 input[type="submit"] {
   border: none!important;
@@ -35,7 +33,7 @@ input[type="password"]:focus {
 }
 
 .control-group {
-     max-width: 450px;
+     max-width: 400px;
 }
 
 
@@ -54,6 +52,24 @@ input[type="password"]:focus {
   display: block;
 
 
+}
+
+.query-row {
+
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;    
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+       
+
+}
+
+#services-section{
+    margin-top: 30px;
 }
 
 #menu-link {
@@ -112,17 +128,7 @@ background-color:#0069d9;
 
 }
 
-.query-row {
 
-    background-color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-}
 
 .query-row  a {
 
@@ -183,3 +189,23 @@ address {
     padding-left: 15px;
     color: white;
 }
+
+
+/*pets page css*/
+
+.advert-image{
+    
+    margin: 0px;   
+    width: 100%;
+    padding: 0px;
+    height: 250px; 
+    background-color: darkslategrey;
+    background-image: url("../img/pets_advert_image.jpg");   
+    background-repeat: no-repeat;    
+    background-size: contain;
+    position: relative
+        
+}
+
+
+
