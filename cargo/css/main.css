@@ -40,7 +40,7 @@ input[type="password"]:focus {
 
 .navbar-brand > img {
 
-    width: 40%;
+    width: 100%;
 }
 
 
@@ -111,6 +111,25 @@ i {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: black;
     background-color:white;
+}
+
+/* logics to be added
+#v-pills-enquiry-tab{
+    
+    color: black;
+    background-color:white;
+}
+*/
+
+.tab-pane h4 {
+    
+    color:white;
+    background-color:#7ac8aa;
+    text-align: center; 
+    margin: 10px;
+    font-weight:bold;
+    letter-spacing: .2em;
+    
 }
 
 .btn-primary {
@@ -202,10 +221,90 @@ address {
     background-color: darkslategrey;
     background-image: url("../img/pets_advert_image.jpg");   
     background-repeat: no-repeat;    
-    background-size: contain;
-    position: relative
+    background-position: center;
+    
         
 }
 
+
+.breadcrumb{
+    
+    margin: auto;
+}
+
+#pet-section {
+    background-color: white;
+    margin: 0;
+    
+}
+
+#pet-section h1 {
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+        
+}
+
+#pet-section p{
+    
+    padding: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 0px;
+        
+}
+
+.pet-enq-form {
+    
+    margin: auto;    
+    padding: 30px;
+    display: block;
+    align-content: center;
+    
+}
+
+
+@media only screen and (max-width: 767px) {
+    
+    .advert-image{
+        background-position: center;
+        background-size: 100%;
+    }
+    
+}
+
+/*baggage page css*/
+
+
+.bag-advert-image{
+    
+    width:100%;
+    height:300px;
+    background-image: url("../img/excessbaggage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.bag-svg-container{
+    
+    margin: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center
+    
+        
+        
+}
+
+.bag-svg-container img {
+    
+    width: 100%;
+    height: 100%    
+    object-fit: contain;
+        
+    
+}
 
 

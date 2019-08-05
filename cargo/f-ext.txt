@@ -1,0 +1,91 @@
+<a class="nav-link current" id="v-pills-enquiry-tab" data-toggle="pill" href="#v-pills-enquiry" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
+                        Get Instant Quote</a>
+
+<div class="tab-pane fade show active" id="v-pills-enquiry" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h4>Excess Baggage</h4>
+                          <form>
+                            <div class="container" style="padding-bottom: 5px"> <p><img src="img/one.svg" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p></div>
+                            <div class="row" style="padding-bottom: 10px">
+                              <div class="col">
+                                <label for="formGroupExampleInput">Destination</label>
+                                <input type="text" class="form-control" placeholder="Destination">
+                              </div>
+                              <div class="col">
+                                <label for="formGroupExampleInput">Dest.city </label>
+                                <input type="text" class="form-control" placeholder="city">
+                              </div>
+
+                              <div class="col">
+                                <label for="formGroupExampleInput">Origin</label>
+                                <input type="text" class="form-control" placeholder="Orgin">
+                              </div>
+
+                              <div class="col">
+                                <label for="formGroupExampleInput">Origin city</label>
+                                <input type="text" class="form-control" placeholder="city">
+                              </div>
+                              </div>
+
+                            <div class="container"> <p><img src="img/two.svg" style="width:30px; height: auto; padding-right: 5px;padding-bottom: 5px;">Baggage Details</p></div>
+
+                            <div class="row">
+
+                              <div class="col-4 offset-8">
+                                <label for="formGroupExampleInput">Units of Measurement</label>
+                                <select class="form-control">
+                                  <option selected="selected" value="metric">Metric (cm &amp; kg)</option>
+                                </select>
+                              </div>
+
+                              <div class="col-8" style="padding-left: 0px">
+                                <select class="form-control">
+                                  <option selected="selected" value="1">Large Suitcase  ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
+                                  <option value="2">Medium Suitcase  ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
+                                  <option value="3">Small Suitcase  ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
+                                  <option value="4">Large Box  ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
+                                  <option value="5">Medium Box  ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
+                                  <option value="6">Small Box  ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
+                                  <option value="7">Bike Box  ( 135 cm x 20 cm x 80 cm , 36 kg )</option>
+                                  <option value="8">Small Golf Bag  ( 127 cm x 25 cm x 30 cm , 20 kg )</option>
+                                  <option value="9">Large Golf Bag  ( 132 cm x 30 cm x 38 cm , 30 kg )</option>
+                                  <option value="10">Skis / Snowboard  ( 182 cm x 20 cm x 20 cm , 15 kg )</option>
+                                  <option value="Custom">Custom Baggage Size</option>
+                                </select>
+                              </div>
+
+                              <div class="row" style="margin-top: 10px ">
+                                <div class="col-2">
+                                  <input type="text" class="form-control" placeholder="cm">
+
+                                </div>
+                                <div class="col-2">
+                                  <input type="text" class="form-control" placeholder="cm">
+                                </div>
+                                <div class="col-2">
+                                  <input type="text" class="form-control" placeholder="cm">
+                                </div>
+                                <div class="col-2 ">
+                                  <input type="text" class="form-control" placeholder="kg">
+                                </div>
+
+                                <button class="add-item" style="margin-left: 30px; border-color:transparent; background-color: transparent; color: blue">Add Items</button>
+
+                              </div>
+
+                            </div>
+
+                            <div style="margin-top: 20px">
+                              <div class="col-12 d-flex justify-content-end">
+                                <button>Continue</button>
+                              </div>
+                            </div>
+
+
+
+
+
+                          </form>
+
+
+    </div>
