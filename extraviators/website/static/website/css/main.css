@@ -244,7 +244,8 @@ nav >ol > li a{
 
 #pet-section {
     background-color: white;
-    margin: 0;
+    padding-bottom: 10px;
+
 
 }
 
@@ -261,13 +262,15 @@ nav >ol > li a{
     text-align: justify;
     font-size: 1.2em;
     margin: 0px;
+    background-color: white;
 
 }
 
 .pet-enq-form {
 
 
-    margin: 30px 300px;
+    margin: 0px 50px;
+    margin-bottom: 10px;
     padding: 30px;
     display: block;
     align-content: center;
@@ -299,6 +302,18 @@ nav >ol > li a{
 
 /*baggage page css*/
 
+#bag-section {
+
+    background-color: white;
+    
+
+
+}
+
+#bag-section h1 {
+
+    text-align: center;
+}
 
 .bag-advert-image{
 
@@ -344,6 +359,7 @@ nav >ol > li a{
 
 
     padding: 15px;
+    margin-bottom: 0px;
 }
 
 
@@ -376,10 +392,46 @@ nav >ol > li a{
 #hum-section {
 
     background-color: white;
-    padding: 0px;
+    padding: 20px;
+    margin:0px; 
 }
 
-#hum-section {
+
+#hum-section h1 {
 
     text-align: center;
+}
+
+#hum-section p {
+
+    padding: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 0px;
+    background-color: white;
+}
+
+
+
+.hum-enq-form {
+
+    margin: 20px 50px;
+    
+    padding: 30px;
+    display: block;
+    align-content: center;
+    background-color:lightsalmon;
+}
+
+
+/*contact css settings*/
+
+.contact-advert-image {
+
+    width:100%;
+    height:300px;
+    background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%
 }

@@ -61,18 +61,20 @@
 
         <div class='bag-svg-container'>
 
-            <img src="img/diagram.svg" alt="">
+            <img src="{% static 'website/img/diagram.svg' %}" alt="">
 
 
         </div>
-        <h4 style="text-align: center">Get a Quote Now</h4>
+        
 
-        <div class="bag-enq-form">
+        <div class="shadow bag-enq-form">
 
             <form>
-                <div class="container" style="background-color: lightsalmon">
-                    <div class="container" style="padding-bottom: 5px">
-                        <p><img src="img/one.svg" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p>
+                <div class="container" style="background-color: lightsalmon;" >
+                    <div class="container" style="padding: 20px 5px">
+
+                        <p><img src="{% static 'website/img/one.svg' %}" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p>
+
                         <div class="row" style="padding-bottom: 10px">
                             <div class="col-md-6 col-sm-6">
                                 <label for="formGroupExampleInput">Destination</label>
@@ -96,7 +98,7 @@
                     </div>
 
                     <div class="container">
-                        <p><img src="img/two.svg" style="width:30px; height: auto; padding-right: 5px;padding-bottom: 5px;">Baggage Details</p>
+                        <p><img src="{% static 'website/img/two.svg' %}" style="width:30px; height: auto; padding-right: 5px;padding-bottom: 5px;">Baggage Details</p>
 
                         <div class="row">
 
