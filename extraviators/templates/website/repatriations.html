@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+    {% block nav_menu %}
+
+    <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto ">
+                <!-- add current-page css for current page  -->
+                <li class="navbar-item  px-4 "> <a class="nav-link" id="menu-link" href="{% url 'website:baggage' %}">Excess Baggage</a> </li>
+                <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:pets' %}">Pet Relocation</a> </li>
+                <li class="navbar-item  px-4"> <a class="nav-link  current-page" id="menu-link" href="{% url 'website:hum' %}">Human Remains</a> </li>
+                <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:contact' %}">Contact us</a> </li>
+            </ul>
+        </div>
+    {% endblock %}
+
+
+{% block main %}
+
+ <!-- Advert image  -->
+
+    <div class="container-fluid">
+
+        <div class="hum-advert-image">
+
+
+        </div>
+
+    </div>
+
+    <!--      breadcrumbs-->
+
+
+    <nav aria-label="breadcrumb" class="breadcrump">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'website:home' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Human Remains</li>
+        </ol>
+    </nav>
+
+    <!-- main section -->
+ <section id="hum-section">
+
+    <div>
+
+            <h1>Human Remains</h1>
+            <p>Tip tip doner landjaeger pig pig swine loin beef turducken. Ham boudin ribeye
+                ham tri-tip ham cow chop tenderloin cow ham ham beef sausage ham steak pig
+                biltong tip t-bone. Strip kielbasa cow beef beef. Ham round pork pig leberkas
+                tip cow fatback ham sausage, tenderloin strip ham drumstick bregenwurst, chicken
+                chuck ribeye tip salami. Cow jerky frankfurter, cow ham pork ribs jerky. Chop
+                ham tip jerky venison, biltong tongue tail sirloin round pig leberkas cow pork
+                prosciutto pig loin andouille chicken. Drumstick ham shank fatback ham round ham
+                tenderloin pig hock shoulder ham pancetta, hock kielbasa sopressata, pork
+                tri-tip ham loin pork, chop prosciutto cow short beef, tip drumstick pig sausage
+                ham landjaeger pork pancetta leberkas.</p>
+
+        </div>
+
+         <div class=" shadow pet-enq-form">
+
+             <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Your details</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Details of the Deceased</h4>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                 <div  class="col-sm-12 col-md-6">
+
+                     <div class="row">
+                         <div class="col-md-3 col-sm-4">
+                             <div class="form-group">
+                                <label for="formGroupExampleInput2">Saluatation</label>
+                                <select class="custom-select">
+                                  <option value="1">Mr</option>
+                                  <option value="2">Ms</option>
+                                 </select>
+                              </div>
+                        </div>
+                         <div class="col-md-9 col-sm-12">
+                             <div class="form-group">
+                                <label for="formGroupExampleInput2">First Name</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name">
+                              </div>
+                        </div>
+
+                        <div class="col-md-12">
+                             <div class="form-group">
+                                <label for="formGroupExampleInput2">Last Name</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name">
+                              </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Email</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                   </div>
+                     <div class="form-group">
+                        <label for="formGroupExampleInput2">Contact Number</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                    </div>
+
+                    <!-- <div class="form-group d-flex justify-content-end" >
+
+                        <input type="submit" class="btn btn-primary" id="formGroupExampleInput2" value="Send enquiry">
+                    </div> -->
+
+
+                 </div>
+
+
+                <div class="col-sm-12 col-md-6 ">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Your relationship with deceased?</label>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" checked>Family Member</label>
+                    <label><input type="radio" name="optradio">other</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Name of the Deceased</label>
+                    <input type="text" class="form-control" id="formGrsoupExampleInput2" placeholder="Name of the Deceased">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Where is the Deceased at the moment</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Did the deceased have insurance for repatriation?</label>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" checked>Yes</label>
+                    <label><input type="radio" name="optradio">No</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Where is the Deceased at the moment</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                  </div>
+
+
+                <div class="row">
+                <div class="col-md-6 col-sm-6">
+                 <div class="form-group">
+                    <label for="formGroupExampleInput2">Date of Departure</label>
+                    <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                    <label for="formGroupExampleInput2">Pet </label>
+                    <input type="input" class="form-control" id="formGroupExampleInput2" placeholder="Dog">
+                    </div>
+                    </div>
+                        <div class="col-md-6 col-sm-6">
+                    <div class="form-group">
+                    <label for="formGroupExampleInput2">Quanity</label>
+                    <select class="custom-select">
+                      <option value="1">1</option>
+                      <option value="1">2</option>
+                      <option value="1">3</option>
+                      <option value="1">4</option>
+                      <option value="1">5</option>
+                      <option value="1">6</option>
+                    </select>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
+                </div>
+             </form>
+
+         </div>
+
+
+
+ </section>
+
+
+
+{% endblock %}

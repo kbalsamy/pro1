@@ -1,0 +1,385 @@
+html {
+    font-size: 16px!important; /* base font*/
+    font-weight: 200;
+
+}
+
+
+body {
+
+    font-family:  "Gotham SSm A", "Gotham SSm B", Arial, maven-pro, sans-serif;
+    color: #484c54;
+    background-color: #CCCCCC!important;
+    letter-spacing: 0px!important;
+    font-kerning: none;
+    font-style: normal;
+    font-size: 100%;
+    margin: 0px;
+}
+
+
+/*form controls*/
+
+input[type="submit"] {
+  border: none!important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+
+    border-color: #484C54 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset !important;
+    outline: 0 none;
+}
+
+.control-group {
+     max-width: 400px;
+}
+
+
+
+.navbar-brand > img {
+
+    width: 100%;
+}
+
+
+.navbar-nav > li > a{
+
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  display: block;
+
+
+}
+
+.query-row {
+
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    align-items: center;
+    margin-top: 30px;
+
+
+}
+
+#services-section{
+    margin-top: 30px;
+}
+
+#menu-link {
+    color: white;
+}
+
+.current-page {
+
+    display: block;
+    border-bottom: 3px solid white !important;
+}
+
+
+
+.navbar-nav > li > #menu-link:hover {
+
+    color: black;
+    background-color: white ;
+    display: block;
+    border-bottom: 3px solid transparent;
+
+}
+
+
+i {
+    padding-right: 5px;
+}
+
+.nav-pills .nav-link {
+
+    background-color: #7ac8aa;
+    border: 1px ;
+    color: white ;
+    margin: 2px;
+
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: black;
+    background-color:white;
+}
+
+/* logics to be added
+#v-pills-enquiry-tab{
+
+    color: black;
+    background-color:white;
+}
+*/
+
+.tab-pane h4 {
+
+    color:white;
+    background-color:#7ac8aa;
+    text-align: center;
+    margin: 10px;
+    font-weight:bold;
+    letter-spacing: .2em;
+
+}
+
+.btn-primary {
+
+    color: black;
+    background-color:#7ac8aa;
+    border-color: white;
+}
+
+}
+
+.btn-primary:hover {
+    color: #fff;
+background-color:#0069d9;
+
+}
+
+
+
+.query-row  a {
+
+    text-align: center;
+
+}
+
+.container-fluid{
+
+    padding: 0px;
+}
+
+
+.card-row{
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+#card-section {
+
+    padding-left: 75px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .carousel-item > img {
+
+        height: 250px;
+    }
+
+    #card-section {
+
+        padding-left: 15px;
+    }
+
+    .card-img-top {
+        height: 50vw;
+
+    }
+}
+
+.footer {
+
+    padding-top: 30px;
+    height: 200px;
+}
+
+
+address {
+    padding-left: 15px;
+    color: white;
+}
+
+
+/*pets page css*/
+
+.advert-image{
+
+    width:100%;
+    height:300px;
+    background-image: url("../img/pets.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%
+
+
+}
+
+
+.breadcrumb{
+
+    margin: auto;
+    background-color:#7ac8aa;
+
+}
+
+nav >ol > li a{
+
+    color:white;
+}
+
+.breadcrumb-item.active {
+
+    color: black !important;
+}
+
+#pet-section {
+    background-color: white;
+    margin: 0;
+
+}
+
+#pet-section h1 {
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+#pet-section p{
+
+    padding: 30px;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 0px;
+
+}
+
+.pet-enq-form {
+
+
+    margin: 30px 300px;
+    padding: 30px;
+    display: block;
+    align-content: center;
+    background-color:lightsalmon;
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-brand {
+
+        width:80%;
+    }
+
+    .advert-image{
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .pet-enq-form {
+
+        margin: 30px;
+    }
+
+
+
+}
+
+/*baggage page css*/
+
+
+.bag-advert-image{
+
+    width:100%;
+    height:300px;
+    background-image: url("../img/excessbaggage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%
+}
+
+.bag-svg-container{
+
+    margin: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center
+
+
+
+}
+
+.bag-svg-container img {
+
+    width: 100%;
+    height: 100%
+    object-fit: contain;
+
+
+}
+
+ .add-item {
+
+    margin-left: 30px;
+    margin-top: 15px;
+    border-color:transparent;
+    background-color: transparent;
+    color: blue;
+}
+
+.bag-enq-form {
+
+
+    padding: 15px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .bag-advert-image{
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .bag-svg-container {
+        margin: 0;
+        padding: 10px;
+
+    }
+}
+
+/*human remains page css*/
+
+.hum-advert-image {
+
+    width:100%;
+    height:300px;
+    background-image: url("../img/hum.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%
+}
+
+#hum-section {
+
+    background-color: white;
+    padding: 0px;
+}
+
+#hum-section {
+
+    text-align: center;
+}
