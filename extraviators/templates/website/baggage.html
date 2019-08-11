@@ -69,7 +69,7 @@
 
         <div class="shadow bag-enq-form">
 
-            <form>
+            <form  action="{% url 'website:testpage' %}" method="POST">
                 <div class="container" style="background-color: lightsalmon;" >
                     <div class="container" style="padding: 20px 5px">
 
@@ -78,21 +78,21 @@
                         <div class="row" style="padding-bottom: 10px">
                             <div class="col-md-6 col-sm-6">
                                 <label for="formGroupExampleInput">Destination</label>
-                                <input type="text" class="form-control" placeholder="Destination">
+                                <input type="text" class="form-control" placeholder="Destination" name='destination'>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <label for="formGroupExampleInput">Destination city </label>
-                                <input type="text" class="form-control" placeholder="city">
+                                <input type="text" class="form-control" placeholder="city" name="city">
                             </div>
 
                             <div class="col-md-6 col-sm-6">
                                 <label for="formGroupExampleInput">Origin</label>
-                                <input type="text" class="form-control" placeholder="Orgin">
+                                <input type="text" class="form-control" placeholder="Orgin" name="Orgin">
                             </div>
 
                             <div class="col">
                                 <label for="formGroupExampleInput">Origin city</label>
-                                <input type="text" class="form-control" placeholder="city">
+                                <input type="text" class="form-control" placeholder="city" name="Origin_city">
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                             </div>
 
                             <div class="col-md-8 col-sm-12" style="padding-left: 0px">
-                                <select class="form-control">
+                                <select class="form-control" name="baggage">
                                     <option selected="selected" value="1">Large Suitcase ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
                                     <option value="2">Medium Suitcase ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
                                     <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
@@ -147,7 +147,7 @@
                             </div>
 
                         </div>
-
+                        {% csrf_token %}
                         <div style="margin-top: 30px; padding-bottom:25px;">
                             <div class="col-12 d-flex justify-content-end">
                                 <button class="btn btn-primary ">Get a Quote</button>
@@ -155,6 +155,7 @@
                         </div>
                     </div>
                 </div>
+
             </form>
 
         </div>

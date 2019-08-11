@@ -15,8 +15,16 @@ def pageNavigation_view(request):
     path_params = {'/pets': 'website/pets.html',
                    '/excessbaggage': 'website/baggage.html',
                    '/repatriations': 'website/repatriations.html',
-                   '/contact': 'website/contact.html'}
+                   '/contact': 'website/contact.html', }
 
     if request.path in path_params.keys():
 
         return render(request, path_params[request.path], context)
+
+
+def testpageview(request):
+
+    context = request.POST.values()
+    path = request.path
+
+    return render(request, 'website/testpage.html', {'context': context, 'path': path})
