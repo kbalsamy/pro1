@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
     {% block nav_menu %}
 
     <div class="collapse navbar-collapse" id="menu">
@@ -70,29 +72,49 @@
         <div class="shadow bag-enq-form">
 
             <form  action="{% url 'website:testpage' %}" method="POST">
+                
                 <div class="container" style="background-color: lightsalmon;" >
                     <div class="container" style="padding: 20px 5px">
+
+                        <div class="row">
+                            
+                               <div class="col-md-5 col-sm-12">
+                                 <div class="form-group">
+                                    {{ bagform.fullname |as_crispy_field}}
+                                  </div>
+                                </div>
+                                 <div class="col-md-5 col-sm-12">
+                                     <div class="form-group">
+                                        {{ bagform.email|as_crispy_field}}
+                                      </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                     <div class="form-group">
+                                        {{ bagform.mobile|as_crispy_field}}
+                                      </div>
+                                </div> 
+                                
+                        </div>
 
                         <p><img src="{% static 'website/img/one.svg' %}" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p>
 
                         <div class="row" style="padding-bottom: 10px">
                             <div class="col-md-6 col-sm-6">
-                                <label for="formGroupExampleInput">Destination</label>
-                                <input type="text" class="form-control" placeholder="Destination" name='destination'>
+                                
+                                {{ bagform.destination_country |as_crispy_field }}
+                                <!-- <input type="text" class="form-control" placeholder="Destination" name='destination'> -->
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <label for="formGroupExampleInput">Destination city </label>
-                                <input type="text" class="form-control" placeholder="city" name="city">
+                                {{ bagform.destination_city |as_crispy_field }}
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <label for="formGroupExampleInput">Origin</label>
-                                <input type="text" class="form-control" placeholder="Orgin" name="Orgin">
+                                {{ bagform.origin_country |as_crispy_field }}
                             </div>
 
                             <div class="col">
-                                <label for="formGroupExampleInput">Origin city</label>
-                                <input type="text" class="form-control" placeholder="city" name="Origin_city">
+                                {{ bagform.origin_city |as_crispy_field }}
                             </div>
                         </div>
                     </div>
@@ -118,35 +140,32 @@
                                     <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
                                     <option value="4">Large Box ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
                                     <option value="5">Medium Box ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
-                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
-                                    <option value="7">Bike Box ( 135 cm x 20 cm x 80 cm , 36 kg )</option>
-                                    <option value="8">Small Golf Bag ( 127 cm x 25 cm x 30 cm , 20 kg )</option>
-                                    <option value="9">Large Golf Bag ( 132 cm x 30 cm x 38 cm , 30 kg )</option>
-                                    <option value="10">Skis / Snowboard ( 182 cm x 20 cm x 20 cm , 15 kg )</option>
-                                    <option value="Custom">Custom Baggage Size</option>
+                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>                               
+                                    <option value="7">Custom Baggage Size</option>
                                 </select>
                             </div>
 
                             <div class="row" style="margin-top: 10px ">
                                 <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm">
+                                    <input type="text" class="form-control" placeholder="cm" name="length">
 
                                 </div>
                                 <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm">
+                                    <input type="text" class="form-control" placeholder="cm" name="width">
                                 </div>
                                 <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm">
+                                    <input type="text" class="form-control" placeholder="cm" name="height">
                                 </div>
                                 <div class="col-3 ">
-                                    <input type="text" class="form-control" placeholder="kg">
+                                    <input type="text" class="form-control" placeholder="kg" name="weight">
                                 </div>
                                 <div >
                                 <button class="add-item" >Add Items</button>
                                 </div>
                             </div>
-
+                                {{ bagform.baggage_detail |as_crispy_field}}
                         </div>
+
                         {% csrf_token %}
                         <div style="margin-top: 30px; padding-bottom:25px;">
                             <div class="col-12 d-flex justify-content-end">
@@ -162,5 +181,11 @@
 
 
     </section>
+
+{% endblock %}
+
+{% block js %}
+
+
 
 {% endblock %}
