@@ -67,17 +67,17 @@
 
 
         </div>
-        
+
 
         <div class="shadow bag-enq-form">
 
             <form  action="{% url 'website:testpage' %}" method="POST">
-                
+
                 <div class="container" style="background-color: lightsalmon;" >
                     <div class="container" style="padding: 20px 5px">
 
                         <div class="row">
-                            
+
                                <div class="col-md-5 col-sm-12">
                                  <div class="form-group">
                                     {{ bagform.fullname |as_crispy_field}}
@@ -93,15 +93,15 @@
                                      <div class="form-group">
                                         {{ bagform.mobile|as_crispy_field}}
                                       </div>
-                                </div> 
-                                
+                                </div>
+
                         </div>
 
                         <p><img src="{% static 'website/img/one.svg' %}" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p>
 
                         <div class="row" style="padding-bottom: 10px">
                             <div class="col-md-6 col-sm-6">
-                                
+
                                 {{ bagform.destination_country |as_crispy_field }}
                                 <!-- <input type="text" class="form-control" placeholder="Destination" name='destination'> -->
                             </div>
@@ -132,18 +132,22 @@
                                     </select>
                                 </fieldset>
                             </div>
+                            {{ bagform.baggage_detail |as_crispy_field}}
 
-                            <div class="col-md-8 col-sm-12" style="padding-left: 0px">
+                            <div id="form-insert">
+
+                            <div class="col-md-8 col-sm-12" style="padding-left: 0px; margin-bottom: 10px">
                                 <select class="form-control" name="baggage">
                                     <option selected="selected" value="1">Large Suitcase ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
                                     <option value="2">Medium Suitcase ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
                                     <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
                                     <option value="4">Large Box ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
                                     <option value="5">Medium Box ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
-                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>                               
+                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
                                     <option value="7">Custom Baggage Size</option>
                                 </select>
                             </div>
+
 
                             <div class="row" style="margin-top: 10px ">
                                 <div class="col-3">
@@ -159,17 +163,30 @@
                                 <div class="col-3 ">
                                     <input type="text" class="form-control" placeholder="kg" name="weight">
                                 </div>
-                                <div >
-                                <button class="add-item" >Add Items</button>
-                                </div>
                             </div>
-                                {{ bagform.baggage_detail |as_crispy_field}}
+
+                        </div>
+                         </div>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <button class="add-item" type="button">Add +</button>
+                            </div>
+                            <div class="col">
+                                <button class="add-item" type="button">Remove -</button>
+                            </div>
+
+                        </div>
+
+                        <div id="form-placeholder">
+
                         </div>
 
                         {% csrf_token %}
                         <div style="margin-top: 30px; padding-bottom:25px;">
                             <div class="col-12 d-flex justify-content-end">
-                                <button class="btn btn-primary ">Get a Quote</button>
+                                <button class="btn btn-primary " type="submit" >Get a Quote</button>
                             </div>
                         </div>
                     </div>
@@ -183,9 +200,6 @@
     </section>
 
 {% endblock %}
-
-{% block js %}
-
-
-
-{% endblock %}
+{% block js_link %}
+    <script type="text/javascript" src="{% static 'website/js/baggage.js' %}"> </script>
+{% endblock  %}

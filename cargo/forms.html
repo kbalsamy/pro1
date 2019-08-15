@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <form id='baggage-booking'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Saluatation</label>
+                            <select class="custom-select">
+                                <option value="1">Mr</option>
+                                <option value="2">Ms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">First Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name">
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Last Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row" style="padding-bottom: 10px">
+                    <div class="col-md-6 col-sm-6">
+                        <label for="formGroupExampleInput">Destination</label>
+                        <input type="text" class="form-control" placeholder="Destination">
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label for="formGroupExampleInput">Destination city </label>
+                        <input type="text" class="form-control" placeholder="city">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <label for="formGroupExampleInput">Origin</label>
+                        <input type="text" class="form-control" placeholder="Orgin">
+                    </div>
+
+                    <div class="col">
+                        <label for="formGroupExampleInput">Origin city</label>
+                        <input type="text" class="form-control" placeholder="city">
+                    </div>
+                    
+                    <div class="col">                        
+                        <input type="hidden" class="form-control" id="baggage">
+                    </div>
+                    
+                    
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 offset-8" style="margin-bottom: 15px;">
+                        <fieldset disabled>
+                            <label for="formGroupExampleInput">Units of Measurement</label>
+                            <select class="form-control">
+                                <option selected="selected" value="metric">Metric (cm &amp; kg)</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <div class="add-form">
+                        <div class='added-container'>
+                            <div class="col-md-8 col-sm-12" style="padding-left: 0px">
+                                <select class="form-control" id="baggage-option">
+                                    <option selected="selected" value="1">Large Suitcase ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
+                                    <option value="2">Medium Suitcase ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
+                                    <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
+                                    <option value="4">Large Box ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
+                                    <option value="5">Medium Box ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
+                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
+                                    <option value="7">Bike Box ( 135 cm x 20 cm x 80 cm , 36 kg )</option>
+                                    <option value="8">Small Golf Bag ( 127 cm x 25 cm x 30 cm , 20 kg )</option>
+                                    <option value="9">Large Golf Bag ( 132 cm x 30 cm x 38 cm , 30 kg )</option>
+                                    <option value="10">Skis / Snowboard ( 182 cm x 20 cm x 20 cm , 15 kg )</option>
+                                    <option value="Custom">Custom Baggage Size</option>
+                                </select>
+                            </div>
+
+                            <div class="row" style="margin-top: 10px ">
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="cm" id="length">
+
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="cm" id="width">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="cm" id="height">
+                                </div>
+                                <div class="col-3 ">
+                                    <input type="text" class="form-control" placeholder="kg" id="weight">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class='container d-flex justify-content-between' style="margin-top: 10px;">
+                        <button class="add-item" type="button">Add Items</button>
+                        <button class="remove-item" type="button">Remove Items</button>
+                    </div>
+
+                    <div class="form-holder">
+                    </div>
+
+
+                </div>
+
+                <div style="margin-top: 30px; padding-bottom:25px;">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-primary " type="submit">Get a Quote</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body></html>

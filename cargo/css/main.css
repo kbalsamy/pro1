@@ -333,7 +333,7 @@ nav >ol > li a{
 
 }
 
- .add-item {
+ .add-item.remove-item {
     
     margin-left: 30px; 
     margin-top: 15px;
@@ -362,3 +362,9 @@ nav >ol > li a{
         
     }
 }
+
+.form-holder > .added-container{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+ 
