@@ -53,7 +53,7 @@
                 </div>
             </div>
             <hr>
-            
+
             <div class="container d-flex justify-content-between">
                 <h5> Enter the baggage details </h5>
                 <fieldset disabled>
@@ -65,47 +65,61 @@
             <hr>
 
             <div class="row">
-                <div class="container d-flex justify-content-end ">
+                
+                <div class="container d-flex justify-content-end" style="margin-bottom: 15px" >
                     <button type="button" id="add-item" style="margin-right: 15px;"><i class="fas fa-plus"></i></button>
                     <button type="button" id="remove-item"><i class="fas fa-minus"></i></button>
                 </div>
+                
                 <div class="container" id="bag-detail">
-                    <div class="container form-val" style="padding: 0px">
-                        <div class="form-group col-sm-8 ">
-                            <label>Baggage Type</label>
-                            <input type="text" class="form-control" id="baggage-type" placeholder="Eg.box or suitcase or bag etc...">
-                        </div>
+                    <!--                   insert starts here -->
+                    
+                    <div class="container form-val" style="padding: 0px">                        
 
-                        <div class="form-group col-sm-12">
-                            <div class="row">
+                            <div class="form-group row bag-inner">
+                                
+                                <div class="col-sm-4 ">                                    
+                                    <input type="text" class="form-control" id="baggage-type" placeholder="Eg.box or suitcase or bag etc...">
+                                </div>
 
-                                <div class="col">
-                                    <input type="text" class="form-control" id="length" placeholder="length">
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="length" placeholder="length">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" id="width" placeholder="width">
+                                
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="width" placeholder="width">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" id="height" placeholder="height">
+                                
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="height" placeholder="height">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" id="weight" placeholder="weight">
+                                
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="weight" placeholder="weight">
                                 </div>
+
                             </div>
-                        </div>
+                        
+
+                            <div>
+                                <input type="hidden" class="form-control" id="baggage-builder">
+                            </div>
+
                     </div>
+
                 </div>
+                <!--                   ends here -->
             </div>
 
             <div class="container form-holder" style="padding: 0px">
             </div>
-            
+
             <div class="container d-flex justify-content-end">
                 <input type="submit" value="Get Quote">
             </div>
-            
+
         </div>
-        
+
     </form>
 
 

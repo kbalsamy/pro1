@@ -1,15 +1,47 @@
 $(function () {
 
+    
+    $("#baggage-type").on("blur", function(){
+        
+        $("#add-item").prop('disabled', false);
+        
+    });
+    
     $("#add-item").click(function () {
-        
-        if($("#baggage-type").val().length > 0){
-            
-            var form = $("#bag-detail").html();
 
-            $(".form-holder").append(form);
+        var bagRows = $("#baggage-type[type='text']").length        
+        
+        switch (true) {
+                
+            case (bagRows == 1):              
+                
+                if ($("#baggage-type").val().length > 0) {
+                    var form = $("#bag-detail").html()
+                    $(".form-holder").append(form)                  
+
+                }
+                
+                break;
+                
+            case (bagRows > 1):
+                
+                console.log("case 2 ")
+                
+                if ($("#baggage-type[type='text']").last().val().length > 0){
+                    
+                    var form = $("#bag-detail").html()
+                    $(".form-holder").append(form)
+                }
+                
+                break;
+                
+            default:
+                
+                $("#add-item").prop('disabled', true);
+                break;
         }
-        
-        
+
+
 
     });
 
@@ -18,34 +50,36 @@ $(function () {
         $(".form-holder").children("div:last").remove()
 
     });
-    
-    $("#bag-booking").submit(function(){
-        
+
+
+
+    $("#bag-booking").submit(function () {
+
         var bt = []
+        var str = ""
+        
+        var l = $(".bag-inner").children("div").length
+        
+        for (for i in l){
             
-        $("#baggage-type").each(function(){
+            $(".bag-inner").children("div").find(":input").each(function(){
            
-         var items = $(this).val()
-         var length = $("#length").val()
-         var width = $("#width").val()
-         var height = $("#height").val()
-         var weight = $("#weight").val()
-         var order= items +"-" + length + "x" + width+"x"+height+"x"+weight
-         
-         bt.push(order)
+            str = str + $(this).val() + "-"
+                
+                });
             
-        });
+        }
         
-        $("#baggage-type .form-val").each(function(){
+        
+                 
             
-            bt.push($(this).val())
-            
-            
-        });
+        
       
-        
-        alert(bt);
-        
+        bt.push(str)
+        alert(bt)
+
+
+
     });
 
 
