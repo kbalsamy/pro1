@@ -1,35 +1,52 @@
 $(function () {
 
-    $(".add-item").click(function () {
+    $("#add-item").click(function () {
+        
+        if($("#baggage-type").val().length > 0){
+            
+            var form = $("#bag-detail").html();
 
-        var form = $(".add-form").html()
-
-        $(".form-holder").append(form);
-
-    });
-
-    $(".remove-item").click(function () {
-
-
-        $(".form-holder").children("div:last").remove();
-
-
+            $(".form-holder").append(form);
+        }
+        
+        
 
     });
 
-    $("#baggage-booking").submit(function(){
-       
-       $("#baggage-option").each(function(){
+    $("#remove-item").click(function () {
+
+        $(".form-holder").children("div:last").remove()
+
+    });
+    
+    $("#bag-booking").submit(function(){
+        
+        var bt = []
+            
+        $("#baggage-type").each(function(){
            
-           alert($(this).val())
-           
-           
-           
-       });
+         var items = $(this).val()
+         var length = $("#length").val()
+         var width = $("#width").val()
+         var height = $("#height").val()
+         var weight = $("#weight").val()
+         var order= items +"-" + length + "x" + width+"x"+height+"x"+weight
+         
+         bt.push(order)
+            
+        });
+        
+        $("#baggage-type .form-val").each(function(){
+            
+            bt.push($(this).val())
+            
+            
+        });
+      
+        
+        alert(bt);
         
     });
-
-
 
 
 });

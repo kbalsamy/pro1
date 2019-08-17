@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,129 +17,97 @@
 
 <body>
 
-    <div class="form-container">
+    <form id="bag-booking">
 
-        <form id='baggage-booking'>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2 col-sm-4">
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Saluatation</label>
-                            <select class="custom-select">
-                                <option value="1">Mr</option>
-                                <option value="2">Ms</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">First Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name">
-                        </div>
-                    </div>
+        <div class="container form-container">
 
-                    <div class="col-md-5">
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Last Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name">
-                        </div>
-                    </div>
+            <h5 style="text-align: center">Excess Bagagge enquiry form</h5>
+            <hr>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <select class='form-control'>
+                        <option selected id="salute">Mr.</option>
+                        <option>Ms.</option>
+                    </select>
                 </div>
-
-
-                <div class="row" style="padding-bottom: 10px">
-                    <div class="col-md-6 col-sm-6">
-                        <label for="formGroupExampleInput">Destination</label>
-                        <input type="text" class="form-control" placeholder="Destination">
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <label for="formGroupExampleInput">Destination city </label>
-                        <input type="text" class="form-control" placeholder="city">
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                        <label for="formGroupExampleInput">Origin</label>
-                        <input type="text" class="form-control" placeholder="Orgin">
-                    </div>
-
-                    <div class="col">
-                        <label for="formGroupExampleInput">Origin city</label>
-                        <input type="text" class="form-control" placeholder="city">
-                    </div>
-                    
-                    <div class="col">                        
-                        <input type="hidden" class="form-control" id="baggage">
-                    </div>
-                    
-                    
-                    
+                <div class="form-group col-sm-8">
+                    <input type="text" class="form-control" id="fullname" placeholder="Full name..">
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 offset-8" style="margin-bottom: 15px;">
-                        <fieldset disabled>
-                            <label for="formGroupExampleInput">Units of Measurement</label>
-                            <select class="form-control">
-                                <option selected="selected" value="metric">Metric (cm &amp; kg)</option>
-                            </select>
-                        </fieldset>
-                    </div>
-
-                    <div class="add-form">
-                        <div class='added-container'>
-                            <div class="col-md-8 col-sm-12" style="padding-left: 0px">
-                                <select class="form-control" id="baggage-option">
-                                    <option selected="selected" value="1">Large Suitcase ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
-                                    <option value="2">Medium Suitcase ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
-                                    <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
-                                    <option value="4">Large Box ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
-                                    <option value="5">Medium Box ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
-                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
-                                    <option value="7">Bike Box ( 135 cm x 20 cm x 80 cm , 36 kg )</option>
-                                    <option value="8">Small Golf Bag ( 127 cm x 25 cm x 30 cm , 20 kg )</option>
-                                    <option value="9">Large Golf Bag ( 132 cm x 30 cm x 38 cm , 30 kg )</option>
-                                    <option value="10">Skis / Snowboard ( 182 cm x 20 cm x 20 cm , 15 kg )</option>
-                                    <option value="Custom">Custom Baggage Size</option>
-                                </select>
-                            </div>
-
-                            <div class="row" style="margin-top: 10px ">
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" id="length">
-
-                                </div>
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" id="width">
-                                </div>
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" id="height">
-                                </div>
-                                <div class="col-3 ">
-                                    <input type="text" class="form-control" placeholder="kg" id="weight">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class='container d-flex justify-content-between' style="margin-top: 10px;">
-                        <button class="add-item" type="button">Add Items</button>
-                        <button class="remove-item" type="button">Remove Items</button>
-                    </div>
-
-                    <div class="form-holder">
-                    </div>
-
-
-                </div>
-
-                <div style="margin-top: 30px; padding-bottom:25px;">
-                    <div class="col-12 d-flex justify-content-end">
-                        <button class="btn btn-primary " type="submit">Get a Quote</button>
-                    </div>
-                </div>
-
             </div>
-        </form>
-    </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="fullname" placeholder="Destination country">
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="fullname" placeholder="Destination city">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="fullname" placeholder="origin country">
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="text" class="form-control" id="fullname" placeholder="origin city">
+                </div>
+            </div>
+            <hr>
+            
+            <div class="container d-flex justify-content-between">
+                <h5> Enter the baggage details </h5>
+                <fieldset disabled>
+                    <select class="form-control">
+                        <option>units:cm &amp kg</option>
+                    </select>
+                </fieldset>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="container d-flex justify-content-end ">
+                    <button type="button" id="add-item" style="margin-right: 15px;"><i class="fas fa-plus"></i></button>
+                    <button type="button" id="remove-item"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="container" id="bag-detail">
+                    <div class="container form-val" style="padding: 0px">
+                        <div class="form-group col-sm-8 ">
+                            <label>Baggage Type</label>
+                            <input type="text" class="form-control" id="baggage-type" placeholder="Eg.box or suitcase or bag etc...">
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            <div class="row">
+
+                                <div class="col">
+                                    <input type="text" class="form-control" id="length" placeholder="length">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="width" placeholder="width">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="height" placeholder="height">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="weight" placeholder="weight">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container form-holder" style="padding: 0px">
+            </div>
+            
+            <div class="container d-flex justify-content-end">
+                <input type="submit" value="Get Quote">
+            </div>
+            
+        </div>
+        
+    </form>
+
 
 
 
@@ -155,4 +124,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
-</body></html>
+</body>
+
+</html>
