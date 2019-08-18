@@ -1,5 +1,9 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.core.mail import send_mail
 
+# from .managers import EventManager
 # Create your models here.
 
 
@@ -53,3 +57,15 @@ class RepatirationsEnquiry(models.Model):
     def __str__(self):
 
         return "HUM/INQ /" + str(self.id)
+
+
+@receiver(post_save, sender=ExcessBaggageEnquiry)
+def my_handler(sender, instance, created, **kwargs):
+
+    send_mail(
+        'Subject {}'.format(instance.id),
+        'Here is the message.',
+        'from@example.com',
+        ['to@example.com'],
+        fail_silently=False,
+    )

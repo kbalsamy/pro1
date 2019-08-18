@@ -25,7 +25,7 @@ SECRET_KEY = 'v71e#rrdqmwz!-h9#rvc=!^x+021t82r9azgfhx2o*swq(575^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website',
     'crispy_forms',
+    'website',
+    'sigtest',
 ]
 
 MIDDLEWARE = [

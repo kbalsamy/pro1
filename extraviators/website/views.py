@@ -29,6 +29,7 @@ def processPostView(request):
         form = ExcessBaggageForm(request.POST)
         if form.is_valid():
             form.save()
+
             return HttpResponse("sucess")
         else:
             return HttpResponse("error")
