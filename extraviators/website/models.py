@@ -7,7 +7,7 @@ class ExcessBaggageEnquiry(models.Model):
 
     fullname = models.CharField(max_length=100)
     email = models.EmailField()
-    mobile = models.IntegerField(blank=True)
+    mobile = models.IntegerField(null=True, blank=True)
     destination_country = models.CharField(max_length=50)
     destination_city = models.CharField(max_length=50)
     origin_country = models.CharField(max_length=50)

@@ -1,205 +1,144 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
 {% load crispy_forms_tags %}
-
-    {% block nav_menu %}
-
-    <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ml-auto ">
-                <!-- add current-page css for current page  -->
-                <li class="navbar-item  px-4 "> <a class="nav-link current-page" id="menu-link" href="{% url 'website:baggage' %}">Excess Baggage</a> </li>
-                <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:pets' %}">Pet Relocation</a> </li>
-                <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:hum' %}">Human Remains</a> </li>
-                <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:contact' %}">Contact us</a> </li>
-            </ul>
-        </div>
-    {% endblock %}
-
+{% block nav_menu %}
+<div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav ml-auto ">
+        <!-- add current-page css for current page  -->
+        <li class="navbar-item  px-4 "> <a class="nav-link current-page" id="menu-link" href="{% url 'website:baggage' %}">Excess Baggage</a> </li>
+        <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:pets' %}">Pet Relocation</a> </li>
+        <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:hum' %}">Human Remains</a> </li>
+        <li class="navbar-item  px-4"> <a class="nav-link" id="menu-link" href="{% url 'website:contact' %}">Contact us</a> </li>
+    </ul>
+</div>
+{% endblock %}
 {% block main %}
-    <!-- Advert image  -->
-
-    <div class="container-fluid">
-
-        <div class="bag-advert-image">
-
-
-        </div>
-
+<!-- Advert image  -->
+<div class="container-fluid">
+    <div class="bag-advert-image">
+    </div>
+</div>
+<!--      breadcrumbs-->
+<nav aria-label="breadcrumb" class="breadcrump">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'website:home' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Excess Baggage</li>
+    </ol>
+</nav>
+<!--    main section -->
+<section id="bag-section">
+    <div class="container">
+        <h1>Excess Baggage</h1>
+        <p>Tip tip doner landjaeger pig pig swine loin beef turducken. Ham boudin ribeye
+            ham tri-tip ham cow chop tenderloin cow ham ham beef sausage ham steak pig
+            biltong tip t-bone. Strip kielbasa cow beef beef. Ham round pork pig leberkas
+            tip cow fatback ham sausage, tenderloin strip ham drumstick bregenwurst, chicken
+            chuck ribeye tip salami. Cow jerky frankfurter, cow ham pork ribs jerky. Chop
+            ham tip jerky venison, biltong tongue tail sirloin round pig leberkas cow pork
+            prosciutto pig loin andouille chicken. Drumstick ham shank fatback ham round ham
+            tenderloin pig hock shoulder ham pancetta, hock kielbasa sopressata, pork
+            tri-tip ham loin pork, chop prosciutto cow short beef, tip drumstick pig sausage
+            ham landjaeger pork pancetta leberkas.</p>
     </div>
 
-    <!--      breadcrumbs-->
+    <div class='bag-svg-container'>
+        <img src="{% static 'website/img/diagram.svg' %}" alt="">
+    </div>
 
 
-    <nav aria-label="breadcrumb" class="breadcrump">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'website:home' %}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Excess Baggage</li>
-        </ol>
-    </nav>
+    <div class="container d-flex justify-content-center pb-5 pt-2" style="background: #7ac8aa;" >
+        <form id="bag-booking" method="POST" action="{% url 'website:bagbooking' %}">
+            {% csrf_token %}
 
+            <div class="container form-container">
+                <h4 style="text-align: center; text-decoration-style:solid;">Excess Bagagge enquiry form</h4>
+                <hr>
+                <div class="row">
 
-    <!--    main section -->
-
-    <section id="bag-section">
-
-        <div>
-
-            <h1>Excess Baggage</h1>
-            <p>Tip tip doner landjaeger pig pig swine loin beef turducken. Ham boudin ribeye
-                ham tri-tip ham cow chop tenderloin cow ham ham beef sausage ham steak pig
-                biltong tip t-bone. Strip kielbasa cow beef beef. Ham round pork pig leberkas
-                tip cow fatback ham sausage, tenderloin strip ham drumstick bregenwurst, chicken
-                chuck ribeye tip salami. Cow jerky frankfurter, cow ham pork ribs jerky. Chop
-                ham tip jerky venison, biltong tongue tail sirloin round pig leberkas cow pork
-                prosciutto pig loin andouille chicken. Drumstick ham shank fatback ham round ham
-                tenderloin pig hock shoulder ham pancetta, hock kielbasa sopressata, pork
-                tri-tip ham loin pork, chop prosciutto cow short beef, tip drumstick pig sausage
-                ham landjaeger pork pancetta leberkas.</p>
-
-
-        </div>
-
-        <div class='bag-svg-container'>
-
-            <img src="{% static 'website/img/diagram.svg' %}" alt="">
-
-
-        </div>
-
-
-        <div class="shadow bag-enq-form">
-
-            <form  action="{% url 'website:testpage' %}" method="POST">
-
-                <div class="container" style="background-color: lightsalmon;" >
-                    <div class="container" style="padding: 20px 5px">
-
-                        <div class="row">
-
-                               <div class="col-md-5 col-sm-12">
-                                 <div class="form-group">
-                                    {{ bagform.fullname |as_crispy_field}}
-                                  </div>
-                                </div>
-                                 <div class="col-md-5 col-sm-12">
-                                     <div class="form-group">
-                                        {{ bagform.email|as_crispy_field}}
-                                      </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                     <div class="form-group">
-                                        {{ bagform.mobile|as_crispy_field}}
-                                      </div>
-                                </div>
-
-                        </div>
-
-                        <p><img src="{% static 'website/img/one.svg' %}" style="width:30px; height: auto; padding-right: 5px;">Shipping Origin & Destination</p>
-
-                        <div class="row" style="padding-bottom: 10px">
-                            <div class="col-md-6 col-sm-6">
-
-                                {{ bagform.destination_country |as_crispy_field }}
-                                <!-- <input type="text" class="form-control" placeholder="Destination" name='destination'> -->
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                {{ bagform.destination_city |as_crispy_field }}
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                {{ bagform.origin_country |as_crispy_field }}
-                            </div>
-
-                            <div class="col">
-                                {{ bagform.origin_city |as_crispy_field }}
-                            </div>
-                        </div>
+                    <div class="form-group col-sm-6">
+                        {{ bagform.fullname|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-3">
+                        {{ bagform.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-3">
+                        {{ bagform.mobile|as_crispy_field }}
                     </div>
 
-                    <div class="container">
-                        <p><img src="{% static 'website/img/two.svg' %}" style="width:30px; height: auto; padding-right: 5px;padding-bottom: 5px;">Baggage Details</p>
-
-                        <div class="row">
-
-                            <div class="col-md-4 col-sm-4 offset-8" style="margin-bottom: 15px;">
-                                <fieldset disabled>
-                                    <label for="formGroupExampleInput">Units of Measurement</label>
-                                    <select class="form-control">
-                                        <option selected="selected" value="metric">Metric (cm &amp; kg)</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            {{ bagform.baggage_detail |as_crispy_field}}
-
-                            <div id="form-insert">
-
-                            <div class="col-md-8 col-sm-12" style="padding-left: 0px; margin-bottom: 10px">
-                                <select class="form-control" name="baggage">
-                                    <option selected="selected" value="1">Large Suitcase ( 90 cm x 40 cm x 60 cm , 40 kg )</option>
-                                    <option value="2">Medium Suitcase ( 70 cm x 30 cm x 50 cm , 20 kg )</option>
-                                    <option value="3">Small Suitcase ( 50 cm x 20 cm x 40 cm , 10 kg )</option>
-                                    <option value="4">Large Box ( 43 cm x 64 cm x 44 cm , 30 kg )</option>
-                                    <option value="5">Medium Box ( 57 cm x 32 cm x 42 cm , 20 kg )</option>
-                                    <option value="6">Small Box ( 43 cm x 37 cm x 33 cm , 10 kg )</option>
-                                    <option value="7">Custom Baggage Size</option>
-                                </select>
-                            </div>
-
-
-                            <div class="row" style="margin-top: 10px ">
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" name="length">
-
-                                </div>
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" name="width">
-                                </div>
-                                <div class="col-3">
-                                    <input type="text" class="form-control" placeholder="cm" name="height">
-                                </div>
-                                <div class="col-3 ">
-                                    <input type="text" class="form-control" placeholder="kg" name="weight">
-                                </div>
-                            </div>
-
-                        </div>
-                         </div>
-
-                        <div class="row">
-
-                            <div class="col">
-                                <button class="add-item" type="button">Add +</button>
-                            </div>
-                            <div class="col">
-                                <button class="add-item" type="button">Remove -</button>
-                            </div>
-
-                        </div>
-
-                        <div id="form-placeholder">
-
-                        </div>
-
-                        {% csrf_token %}
-                        <div style="margin-top: 30px; padding-bottom:25px;">
-                            <div class="col-12 d-flex justify-content-end">
-                                <button class="btn btn-primary " type="submit" >Get a Quote</button>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        {{ bagform.destination_country|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-6">
+                        {{ bagform.destination_city|as_crispy_field }}
                     </div>
                 </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        {{ bagform.origin_country|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-sm-6">
+                        {{ bagform.origin_city|as_crispy_field }}
+                    </div>
+                </div>
+                <hr>
+                <div class="container d-flex justify-content-between">
+                    <h5> Enter the baggage details </h5>
+                    <fieldset disabled>
+                        <select class="form-control">
+                            <option>units:cm &amp kg</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="container d-flex justify-content-end" style="margin-bottom: 15px">
+                        <button type="button" id="add-item" style="margin-right: 15px;"><i class="fas fa-plus"></i></button>
+                        <button type="button" id="remove-item"><i class="fas fa-minus"></i></button>
+                    </div>
+                    <div>
+                               {{ bagform.baggage_detail|as_crispy_field }}
+                    </div>
+                    <div class="container" id="bag-detail">
+                        <!--                   insert starts here -->
+                        <div class="container form-val" style="padding: 0px">
+                            <div class="form-group row bag-inner">
+                                <div class="col-sm-4 ">
+                                    <input type="text" class="form-control" id="baggage-type" placeholder="Eg.box or suitcase or bag etc...">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="length" placeholder="length">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="width" placeholder="width">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="height" placeholder="height">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="weight" placeholder="weight">
+                                </div>
+                            </div>
 
-            </form>
+                        </div>
+                    </div>
+                    <!--                   ends here -->
+                </div>
+                <div class="container form-holder" style="padding: 0px">
+                </div>
+                <div class="container d-flex justify-content-end">
+                    <input class="btn btn-primary" type="submit" value="Get Quote">
+                </div>
+            </div>
+        </form>
+    </div>
 
-        </div>
-
-
-    </section>
-
+    <div class="alert alert-success" role="alert">
+  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+</section>
 {% endblock %}
 {% block js_link %}
-    <script type="text/javascript" src="{% static 'website/js/baggage.js' %}"> </script>
-{% endblock  %}
+<script type="text/javascript" src="{% static 'website/js/baggage.js' %}"> </script>
+{% endblock %}

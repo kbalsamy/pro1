@@ -18,10 +18,18 @@ body {
 }
 
 
+
+
 /*form controls*/
 
 input[type="submit"] {
   border: none!important;
+}
+
+input[type="submit"]:hover{
+
+    color: #484c54;
+    background-color: white;
 }
 
 input[type="text"]:focus,
@@ -304,11 +312,16 @@ nav >ol > li a{
 
 #bag-section {
 
-    background-color: white;
-    
-
-
+    background-color:white;
+    padding: 30px;
 }
+
+#bag-section p{
+
+    text-align: justify;
+}
+
+
 
 #bag-section h1 {
 
@@ -393,7 +406,7 @@ nav >ol > li a{
 
     background-color: white;
     padding: 20px;
-    margin:0px; 
+    margin:0px;
 }
 
 
@@ -416,7 +429,7 @@ nav >ol > li a{
 .hum-enq-form {
 
     margin: 20px 50px;
-    
+
     padding: 30px;
     display: block;
     align-content: center;

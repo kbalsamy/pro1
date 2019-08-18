@@ -1,42 +1,42 @@
 $(function () {
 
-    
-    $("#baggage-type").on("blur", function(){
-        
+
+    $("#baggage-type").on("blur", function () {
+
         $("#add-item").prop('disabled', false);
-        
+
     });
-    
+
     $("#add-item").click(function () {
 
-        var bagRows = $("#baggage-type[type='text']").length        
-        
+        var bagRows = $("#baggage-type[type='text']").length
+
         switch (true) {
-                
-            case (bagRows == 1):              
-                
+
+            case (bagRows == 1):
+
                 if ($("#baggage-type").val().length > 0) {
                     var form = $("#bag-detail").html()
-                    $(".form-holder").append(form)                  
+                    $(".form-holder").append(form)
 
                 }
-                
+
                 break;
-                
+
             case (bagRows > 1):
-                
+
                 console.log("case 2 ")
-                
-                if ($("#baggage-type[type='text']").last().val().length > 0){
-                    
+
+                if ($("#baggage-type[type='text']").last().val().length > 0) {
+
                     var form = $("#bag-detail").html()
                     $(".form-holder").append(form)
                 }
-                
+
                 break;
-                
+
             default:
-                
+
                 $("#add-item").prop('disabled', true);
                 break;
         }
@@ -56,31 +56,25 @@ $(function () {
     $("#bag-booking").submit(function () {
 
         var bt = []
-        var str = ""
-        
-        var l = $(".bag-inner").children("div").length
-        
-        for (for i in l){
-            
-            $(".bag-inner").children("div").find(":input").each(function(){
-           
-            str = str + $(this).val() + "-"
-                
-                });
-            
-        }
-        
-        
-                 
-            
-        
-      
-        bt.push(str)
-        alert(bt)
 
 
+                var s = $(".form-val").children("div").find(":input").map(function(){
+                   
+                    return $(this).val()            
+                }).get().join("-")
 
+                bt.push(s) 
+        
+                $("#baggage-builder").val(bt)
+        
+                ($("#baggage-builder").val())
+        
     });
-
+    
+    
+    
 
 });
+
+
+

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import homePage_view, pageNavigation_view, testpageview
+from .views import homePage_view, pageNavigation_view, processPostView
 
 app_name = 'website'
 
@@ -9,5 +9,5 @@ urlpatterns = [path('', homePage_view, name='home'),
                path('excessbaggage', pageNavigation_view, name='baggage'),
                path('repatriations', pageNavigation_view, name='hum'),
                path('contact', pageNavigation_view, name='contact'),
-               path('test', testpageview, name='testpage'),
+               path('bagbooking', processPostView, name='bagbooking'),
                ]
