@@ -1,10 +1,45 @@
-<p>
-	
-	{% for v in context %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+</head>
+<body>
 
-	{{ v }}
+    <form method="POST" id="sample-form">
+        {% csrf_token %}
+        <input type="submit" value="submit" name="test" id='ajax-submit'>
+    </form>
 
-	{% endfor %}
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
-	{{ path }}
-</p>
+<script type="text/javascript">
+
+    $(function(){
+
+        $("#sample-form").submit(function(e){
+
+            e.preventDefault();
+
+            var c = $("input[type='hidden']").val()
+
+            $.ajax({
+            url:"/test",
+            type: "POST",
+            data: c,
+            datatype: "json",
+            success:function(data){
+                alert('sucess');
+            }
+
+        });
+         return false;
+
+
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

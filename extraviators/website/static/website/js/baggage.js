@@ -1,6 +1,7 @@
 $(function() {
 
-    $(".alert").alert('close')
+
+
     $("#baggage-type").on("blur", function() {
 
         $("#add-item").prop('disabled', false);
@@ -53,39 +54,34 @@ $(function() {
 
 
 
-    $("#bag-booking").submit(function() {
+    $("#bag-booking").submit(function(e) {
 
+        e.preventDefault();
+        var alertbox = $(".alert")
         var bt = []
-
-
         var s = $(".form-val").children("div").find(":input").map(function() {
-
             return $(this).val()
         }).get().join("-")
-
         bt.push(s)
 
         $("#id_baggage_detail").val(bt)
 
-
         var form = $("#bag-booking")
+        var data = form.serialize()
 
         $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: form.serialize(),
+            type: "POST",
+            url: "/bagbooking",
+            data: data,
+            dataType: "json",
             success: function(data) {
-                alert(data);
-                $('.alert').alert()
-            },
-            error: function(data) {
-                alert(data)
+               alert("your enquiry is successfully submited")
             }
+
         });
 
+        return false;
+
     });
-
-
-
 
 });

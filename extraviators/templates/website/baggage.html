@@ -45,9 +45,16 @@
         <img src="{% static 'website/img/diagram.svg' %}" alt="">
     </div>
 
+    <div class="container alert-container">
+        <div class="row">
+        <div class="alert alert-success show" role="alert">
+  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div>
+</div>
+    </div>
 
-    <div class="container d-flex justify-content-center pb-5 pt-2" style="background: #7ac8aa;" >
-        <form id="bag-booking" method="POST" action="{% url 'website:bagbooking' %}">
+    <div class="container d-flex justify-content-center pb-5 pt-2 bag-enq-form" style="background: #7ac8aa;" >
+        <form id="bag-booking" method="POST" >
             {% csrf_token %}
 
             <div class="container form-container">
@@ -131,13 +138,13 @@
                     <input class="btn btn-primary" type="submit" value="Get Quote">
                 </div>
             </div>
-        </form>
-    </div>
 
-    <div class="alert alert-success" role="alert">
-  This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-</div>
+        </form>
+            </div>
+
+
 </section>
+
 {% endblock %}
 {% block js_link %}
 <script type="text/javascript" src="{% static 'website/js/baggage.js' %}"> </script>
